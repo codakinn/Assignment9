@@ -1,11 +1,42 @@
 #ifndef BINARY_SEARCH_TREE_H
 #define BINARY_SEARCH_TREE_H
 
-class BinarySearchTree
-{
- public:
+#include <string>
+using namespace std;
+
+class Node{
   
  private:
-}
+  Node *left;
+  Node *right;
+  string key;
+  int data;
+  
+ public:
+  Node(string key);
+
+};
+
+class BinarySearchTree{
+
+ public:
+  BinarySearchTree();
+  ~BinarySearchTree();
+  void set(string key, int value);
+  int find(string key);
+  void print();
+  string min();
+  string max();
+  void save_file(string fName);
+  void delete(string key);
+  
+ private:
+  Node *root;
+  void insertHelper(Node *current, string key, int value);
+  void deleteHelper(string key);
+  void printHelper(Node *current);
+  void destructorHelper(Node *current);
+
+};
 
 #endif
