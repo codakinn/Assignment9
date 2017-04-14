@@ -5,7 +5,6 @@
 using namespace std;
 
 class Node{
-  
  private:
   Node *left;
   Node *right;
@@ -13,8 +12,10 @@ class Node{
   int data;
   
  public:
-  Node(string key);
-
+  Node(string search, int value){
+    key = search;
+    data = value;
+  }
 };
 
 class BinarySearchTree{
