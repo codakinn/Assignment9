@@ -37,6 +37,7 @@ class BinarySearchTree{
   void deleteHelper(string key);
   void printHelper(Node *current);
   void destructorHelper(Node *current);
+  int findHelper(Node* current, string key);
 
 };
 
