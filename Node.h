@@ -8,31 +8,31 @@ class Node
   public:
     Node(string key){
       this->key == key;
-    }
-    Node* &operator=(Node* copy){
-      this->left = copy->left;
-      this->right = copy->right;
-      this->key = copy->key;
-      this->data = copy->data;
+      data = 0;
     }
     void setData(int num){
       data = num;
     }
-    int getData(){
+    int Data(){
       return data;
     }
     void setKey(string key){
       this->key == key;
     }
-    string getKey(){
+    string Key(){
       return key;
     }
     void setLeft(Node* current){
       left = current;
     }
-    
+    void Left(){
+      return left; 
+    }
     void setRight(Node* current){
       right = current;
+    }
+    void Right(){
+      return right; 
     }
     
   private:
