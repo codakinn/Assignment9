@@ -10,10 +10,10 @@ CFLAGS = -c -Wall $(DEBUG)
 # Target
 TARGET = BST
 
-$(TARGET): main.o binary_search_tree.o
-	$(CC) main.o binary_search_tree.o -o BST
+$(TARGET): driver.o binary_search_tree.o
+	$(CC) driver.o binary_search_tree.o -o BST
 
-main.o: main.cpp binary_search_tree.h
+driver.o: driver.cpp binary_search_tree.h
 	$(CC) $(CFLAGS) main.cpp
   
 binary_search_tree.o: binary_search_tree.cpp binary_search_tree.h Node.h
