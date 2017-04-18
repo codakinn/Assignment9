@@ -15,9 +15,9 @@ $(TARGET): driver.o binary_search_tree.o
 
 driver.o: driver.cpp binary_search_tree.h
 	$(CC) $(CFLAGS) main.cpp
-  
+
 binary_search_tree.o: binary_search_tree.cpp binary_search_tree.h Node.h
-  $(CC) $(CFLAGS) binary_search_tree.cpp
+	$(CC) $(CFLAGS) binary_search_tree.cpp
 
 clean:
 	rm *.o *~ $(TARGET)
