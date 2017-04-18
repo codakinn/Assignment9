@@ -19,15 +19,16 @@ class BinarySearchTree{
   string min();
   string max();
   void save_file(string fName);
-  void delete(string key);
+  void load_from_file(string fName);
+  void Delete(string key);
   
  private:
   Node *root;
   void insertHelper(Node *current, string key, int value);
-  void deleteHelper(Node* current, string key);
+  void deleteHelper(Node* parent, string key);
   void printHelper(Node *current);
   void destructorHelper(Node *current);
-  void saveHelper(Node* current, ofstream outFile)
+  void saveHelper(Node* current, ofstream& outFile);
   int findHelper(Node* current, string key);
 
 };

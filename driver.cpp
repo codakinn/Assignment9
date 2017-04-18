@@ -58,23 +58,24 @@ int main()
       string word;
       cout << "Please enter the word you wish to delete: " << endl;
       cin >> word;
-      if(myTree.delete(word))
-        cout << "Deleted!" << endl;
+      myTree.Delete(word);
+      cout << "Deleted!" << endl;
       cout << endl;
     }
     else if(userChoice == 7){
       string fName;
       cout << "Please enter the name of the file to write to: " << endl;
       cin >> fName;
-      if(myTree.save_to_file(fName))
-        cout << "File saved!" << endl;
+      myTree.save_file(fName);
+      cout << "File saved!" << endl;
     }
     else if(userChoice == 8){
       cout << "Please enter a data file for analysis: ";
       string fileName;
       cin >> fileName;
-      if(myTree.load_from_file(fileName))
-        cout << "File loaded" << endl; 
+      myTree.load_from_file(fileName);
+      cout << "File loaded" << endl;
+      cout << endl;
     }
   }
 }

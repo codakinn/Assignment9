@@ -9,6 +9,8 @@ class Node
     Node(string key){
       this->key == key;
       data = 0;
+      right = NULL;
+      left = NULL;
     }
     void setData(int num){
       data = num;
@@ -25,13 +27,13 @@ class Node
     void setLeft(Node* current){
       left = current;
     }
-    void Left(){
+    Node* Left(){
       return left; 
     }
     void setRight(Node* current){
       right = current;
     }
-    void Right(){
+    Node* Right(){
       return right; 
     }
     
@@ -40,6 +42,6 @@ class Node
     Node* right;
     string key;
     int data;
-}
+};
 
-#endif NODE_H
+#endif
