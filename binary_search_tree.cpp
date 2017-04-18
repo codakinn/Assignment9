@@ -2,6 +2,7 @@
 #include <string>
 #include <fstream>
 #include "binary_search_tree.h"
+#include "Node.h"
 
 using namespace std;
 
