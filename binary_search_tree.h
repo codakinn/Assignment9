@@ -1,7 +1,8 @@
 #ifndef BINARY_SEARCH_TREE_H
 #define BINARY_SEARCH_TREE_H
 
-#include <fstream>
+#include "Node.h"
+#include <iostream>
 #include <string>
 
 using namespace std;
